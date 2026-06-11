@@ -1,0 +1,44 @@
+{
+  "name": "chinese-business-slides",
+  "canvas": {
+    "width": 1280,
+    "height": 720,
+    "aspectRatio": "16:9"
+  },
+  "colors": {
+    "navy": "#173B63",
+    "blue": "#1EA5D8",
+    "blueLight": "#B8DCEA",
+    "orange": "#F28A32",
+    "orangeLight": "#F8CDA8",
+    "red": "#B52832",
+    "redLight": "#F8E9EA",
+    "ink": "#1C2A38",
+    "muted": "#65788A",
+    "paper": "#FAF9F5",
+    "paleBlue": "#EAF5FB",
+    "line": "#D6E0E7",
+    "white": "#FFFFFF"
+  },
+  "type": {
+    "fontFamily": "PingFang SC, Microsoft YaHei, sans-serif",
+    "coverTitle": 54,
+    "slideTitle": 32,
+    "subtitle": 15,
+    "body": 14,
+    "metric": 32,
+    "footer": 10
+  },
+  "spacing": {
+    "pageX": 60,
+    "pageTop": 46,
+    "cardPadding": 20,
+    "cardGap": 20,
+    "footerY": 680
+  },
+  "geometry": {
+    "cardRadius": 4,
+    "accentStrip": 8,
+    "borderWidth": 1
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "中国商赛商业演示"
+  short_description: "制作清晰统一的中国商赛、路演与行业分析 PPTX 或 HTML"
+  default_prompt: "Use $chinese-business-slides to create a clear, unified Chinese business presentation in PPTX or HTML."

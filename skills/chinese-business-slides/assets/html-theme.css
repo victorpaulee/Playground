@@ -1,0 +1,130 @@
+:root {
+  --cbs-navy: #173B63;
+  --cbs-blue: #1EA5D8;
+  --cbs-blue-light: #B8DCEA;
+  --cbs-orange: #F28A32;
+  --cbs-orange-light: #F8CDA8;
+  --cbs-red: #B52832;
+  --cbs-red-light: #F8E9EA;
+  --cbs-ink: #1C2A38;
+  --cbs-muted: #65788A;
+  --cbs-paper: #FAF9F5;
+  --cbs-pale-blue: #EAF5FB;
+  --cbs-line: #D6E0E7;
+  --cbs-white: #FFFFFF;
+  --cbs-font: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #e8eef2;
+  color: var(--cbs-ink);
+  font-family: var(--cbs-font);
+}
+
+.cbs-slide {
+  position: relative;
+  width: min(1280px, 100vw);
+  aspect-ratio: 16 / 9;
+  margin: 24px auto;
+  padding: 46px 60px 40px;
+  overflow: hidden;
+  background: var(--cbs-paper);
+  box-shadow: 0 10px 32px rgba(23, 59, 99, 0.12);
+}
+
+.cbs-dark {
+  background: var(--cbs-navy);
+  color: var(--cbs-white);
+}
+
+.cbs-kicker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--cbs-navy);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cbs-kicker::before {
+  width: 6px;
+  height: 20px;
+  background: var(--cbs-orange);
+  content: "";
+}
+
+.cbs-dark .cbs-kicker { color: var(--cbs-white); }
+
+.cbs-title {
+  margin: 24px 0 0;
+  color: inherit;
+  font-size: 32px;
+  line-height: 1.25;
+}
+
+.cbs-subtitle {
+  margin: 10px 0 0;
+  color: var(--cbs-muted);
+  font-size: 15px;
+}
+
+.cbs-dark .cbs-subtitle { color: #B8CDDD; }
+
+.cbs-card {
+  position: relative;
+  padding: 20px;
+  border: 1px solid var(--cbs-line);
+  border-radius: 4px;
+  background: var(--cbs-white);
+  color: var(--cbs-ink);
+}
+
+.cbs-card::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 8px;
+  background: var(--cbs-navy);
+  content: "";
+}
+
+.cbs-card--blue::before { background: var(--cbs-blue); }
+.cbs-card--orange::before { background: var(--cbs-orange); }
+.cbs-card--red::before { background: var(--cbs-red); }
+
+.cbs-source {
+  position: absolute;
+  right: 60px;
+  bottom: 16px;
+  left: 60px;
+  padding-top: 8px;
+  border-top: 1px solid var(--cbs-line);
+  color: var(--cbs-muted);
+  font-size: 10px;
+}
+
+.cbs-dark .cbs-source {
+  border-color: #6D8BA5;
+  color: #A9C0D2;
+}
+
+@media (max-width: 900px) {
+  .cbs-slide {
+    margin: 12px auto;
+    transform-origin: top center;
+  }
+}
+
+@media print {
+  @page { size: 13.333in 7.5in; margin: 0; }
+  body { background: var(--cbs-white); }
+  .cbs-slide {
+    width: 13.333in;
+    height: 7.5in;
+    margin: 0;
+    break-after: page;
+    box-shadow: none;
+  }
+}
